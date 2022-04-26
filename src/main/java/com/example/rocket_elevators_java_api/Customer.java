@@ -15,6 +15,7 @@ public class Customer {
     private String firstName;
     private String lastName;
 
+
     public Integer getId() {
         return id;
     }
@@ -28,6 +29,7 @@ public class Customer {
     }
 
     public void setFirstName(String firstName) {
+
         this.firstName = firstName;
     }
 

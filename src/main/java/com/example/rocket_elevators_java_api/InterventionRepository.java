@@ -6,5 +6,4 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface InterventionRepository extends JpaRepository<Intervention, Integer> {
 
-
 }
