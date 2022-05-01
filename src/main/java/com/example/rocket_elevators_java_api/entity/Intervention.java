@@ -1,4 +1,4 @@
-package com.example.rocket_elevators_java_api;
+package com.example.rocket_elevators_java_api.entity;
 
 import javax.persistence.*;
 import java.time.Instant;
@@ -21,8 +21,8 @@ public class Intervention {
     private int columnId;
     @Column(name="elevatorID")
     private int elevatorId;
-    @Column(name="employeeID")
-    private int employeeId;
+    @Column(name="employee")
+    private int employee;
 
     private Instant start_date_and_time_of_the_intervention;
     private Instant end_date_and_time_of_the_intervention;
@@ -49,7 +49,7 @@ public class Intervention {
         this.batteryId = batteryId;
         this.columnId = columnId;
         this.elevatorId = elevatorId;
-        this.employeeId = employeeId;
+        this.employee = employee;
         this.report = report;
 
     }
@@ -110,11 +110,11 @@ public class Intervention {
     }
 
     public int getEmployeeId() {
-        return employeeId;
+        return employee;
     }
 
     public void setEmployeeId(int employeeId) {
-        this.employeeId = employeeId;
+        this.employee = employeeId;
     }
 
     public String getResult() {

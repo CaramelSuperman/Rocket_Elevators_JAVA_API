@@ -1,21 +1,27 @@
 package com.example.rocket_elevators_java_api;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.RestController;
+
 @SpringBootApplication
 @RestController
 public class RocketElevatorsJavaApiApplication {
+    @Autowired
+
+
+
 
     public static void main(String[] args) {
         SpringApplication.run(RocketElevatorsJavaApiApplication.class, args);
     }
-
-   // @GetMapping("/hello")
-   // public String sayHello(@RequestParam(value = "myName", defaultValue = "World") String name) {
-       // return String.format("Hello %s!", name);
-   // }
+    @Bean
+    public PasswordEncoder passwordEncoder(){
+        return  NoOpPasswordEncoder.getInstance();
+    }
 
 }

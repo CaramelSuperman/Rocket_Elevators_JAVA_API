@@ -1,0 +1,5 @@
+sever:
+  port: 8080
+
+jwt:
+  secret: secretKey123
