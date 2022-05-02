@@ -2,7 +2,6 @@ package com.example.rocket_elevators_java_api.entity;
 
 
 import javax.persistence.*;
-import java.time.Instant;
 
 @Entity
 @Table(name="users")

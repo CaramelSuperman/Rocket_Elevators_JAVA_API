@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -75,7 +76,20 @@ public class InterventionController {
                 }
         return ResponseEntity.ok(updateIntervention);
         }
+    @GetMapping("/customer/{id}")
+    public List<Intervention> getAllCustomersIntervention(@PathVariable String id){
 
+        List<Intervention> allInterventionsList = new ArrayList<>();
+
+        for (Intervention intervention:getAllInterventions()) {
+
+            if (intervention.getCustomerId().equals(id)) {
+
+                allInterventionsList.add(intervention);
+            }
+        }
+        return allInterventionsList;
+    }
     }
 
 
