@@ -1,6 +1,6 @@
 package com.example.rocket_elevators_java_api.controller;
 
-import com.example.rocket_elevators_java_api.entity.Battery;
+
 import com.example.rocket_elevators_java_api.entity.Elevator;
 import com.example.rocket_elevators_java_api.service.ElevatorService;
 import org.springframework.beans.factory.annotation.Autowired;
